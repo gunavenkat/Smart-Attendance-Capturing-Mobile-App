@@ -3,6 +3,8 @@ python -m venv env
 
 -------------for running an environment----(run)-----------------------------------------------------------
 env\scripts\activate  
+--------------------for running server---------------------
+python manage.py runserver
 
 -------------for installing libraries----------------------------------------------------------
 
