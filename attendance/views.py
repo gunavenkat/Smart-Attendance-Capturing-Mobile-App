@@ -18,6 +18,5 @@ def uploadimage(request):
     user=User(pic=picture)
     user.save();
     
-    return render(request,"attendance.html")
-    pass
+    return render(request,"uploaded.html")
 
