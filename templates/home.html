@@ -10,6 +10,9 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Merienda+One&family=Neonderthaw&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href='{% static 'styles/home.css' %}?{% now "U" %}'>
 </head>
@@ -17,6 +20,7 @@
    <section id="home">
       <div id="heading">
          <div id="text">
+            <h2 class="title-name">HaaZaR</h2>
             <h2>Welcome {{user.first_name}}!!!</h2>
             <div id="messages">
             {% for message in messages %}
@@ -40,7 +44,7 @@
 
    
    <div id="navbar">
-       <i class="fa-solid fa-pegasus"></i>
+      
       {% if user.is_authenticated %}
       <a href="/employee">Employee Details</a>
       <a href="/attendance">Attendance Registration</a>
