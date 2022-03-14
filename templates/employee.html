@@ -14,19 +14,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Merienda+One&family=Neonderthaw&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href='{% static 'styles/employee.css' %}?{% now "U" %}'>
- 
+  <script src="https://kit.fontawesome.com/1b1fd2ca59.js" crossorigin="anonymous"></script>
+  
+  
 
 </head>
 
 <body >
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="">HaaZar</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg">
+    <a class="navbar-brand" href=""><i class="fa-solid fa-user-clock"></i>   HaaZar</a>
  
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,7 +39,7 @@
           <a class="nav-link"  href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/attendance">Attendence Registration</a>
+          <a class="nav-link"  href="/attendance">Attendence Registration</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link " href="/accounts/logout">LOGOUT</a>
@@ -67,7 +69,7 @@
             <td>{{Last_name}}</td> 
         </tr>
         <tr>
-            <td>Employee.No:  </td>
+            <td>Employee.ID:  </td>
             <td>{{Emp_no}}</td> 
         </tr>
         <tr>

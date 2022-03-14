@@ -1,5 +1,5 @@
 html{
-  height:100%;
+  height:auto;
 }
 body{
   /*background-image: linear-gradient(#01796f 70%,#00a693 60%),url(../images/background2.jpg);*/
@@ -10,7 +10,7 @@ body{
   max-height: max-content;
   font-family: 'Noto Sans KR', sans-serif;
 }
-#navbar {
+/* #navbar {
   position:fixed;
   width:100%;
   margin-top:0;
@@ -37,28 +37,31 @@ body{
   background-color:#6abe06;
   color:white;
   border-radius:10px;
-}
-.crop_container{
-  width:25%;
-  height: 400px;
-  float:right;
-  margin-top: 8%;
-  background:white;
-  margin-left:20px;
-  text-align: center;
-  padding-bottom: 70px;
-  box-shadow:6px 6px 6px rgba(0,0,0, 0.6);
-  margin-right:20px;
-  border-radius: 10px;
-  transition: transform .2s;
-}
+} */
+/* Navigation Bar */
+.navbar-brand{
+  padding-top:0.7rem;
+  font-family:"Merienda One";
+  font-size:2.3rem;    
+ 
+  padding-left: 2.4rem;
 
+}
+.nav-item{
+
+  padding-right:2rem;
+  
+}
+.nav-link{
+  font-family:"Montserrat" ;
+  font-size: 1rem ;
+}
 p{
   line-height:18pt;
   font-size:16px;
 }
 #heading{
-  margin-top:10rem;
+  margin-top:5rem;
   margin-bottom: auto;
   width:35vw;
   text-align: center;
@@ -71,19 +74,9 @@ h4{
   padding-left: 20px;
   padding-top:5px;
 }
-.logo{
-  width: 50px;
-  height:50px;
-  text-align: center;
-  vertical-align: middle;
-  background-color:white;
-  border-radius: 50%;
-  margin-left:20px;
-  transition: transform .2s;
-}
-.logo hover{
-  transform:scale(1.1);
-}
+
+
+
 #text p{
   font-size: 20px;
 }
@@ -117,11 +110,33 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+.img{
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+}
+.title-name{
+  font-family:Merienda One;
+  font-weight: 400;
+}
 
 
 
 .btn{
   margin-top: 3rem;
-  
+  margin-bottom:5rem;
   text-align: center;
+}
+
+@media(max-width:1028px){
+     
+  #heading{
+    font-size: small;
+    text-align:center;
+    margin-left:1rem;
+    width:30rem;
+  }
+  
+  
 }
