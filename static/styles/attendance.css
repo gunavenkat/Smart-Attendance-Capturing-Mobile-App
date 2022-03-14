@@ -1,0 +1,122 @@
+body{
+  
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+height:800px;
+color:white;
+}
+.navbar{  
+  margin-top: auto;  
+}      
+/* Navigation Bar */
+.navbar-brand{
+  padding-top:0.7rem;
+  font-family:"Merienda One";
+  font-size:2.3rem;    
+ 
+  padding-left: 2.4rem;
+
+}
+.nav-item{
+
+  padding-right:2rem;
+  
+}
+.nav-link{
+  font-family:"Montserrat" ;
+  font-size: 1rem ;
+}
+  
+
+
+/* #navbar 
+{
+  margin-top:3rem;
+  position:fixed;
+  width:100%;
+  
+  margin-left:0;
+  padding-top:20px;
+  padding-bottom:20px;
+  text-decoration: none;
+  left:0;
+  top:0;
+}
+#navbar a{
+  padding-left:30px;
+  padding-right: 30px;
+  text-decoration: none;
+  font-size:18px;
+  text-align:center;
+  color:white;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+#navbar a:hover{
+  padding-top:8px;
+  padding-bottom:8px;
+  background-color:#6abe06;
+  color:white;
+  border-radius:10px;
+} */
+
+h2{
+    margin-top:10rem;
+    text-align: center;
+}
+input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: 8px;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+ 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid #5ce763;
+  padding: .2em .4em;
+  
+  border-radius: 8px;
+  background-color: #9bfe9b;
+  transition: 1s;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+table{
+  margin-top:7rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+@media(max-width:1028px){
+     
+  h2{
+    font-size: medium;
+    text-align:center;
+    margin-left:2rem;
+    margin-right: 2rem;
+  }
+  .btn{
+    margin-right: 4rem;
+  }
+  input[type=file]::file-selector-button {
+    margin-left: 4rem;
+  }
+}
