@@ -55,20 +55,29 @@
     </div>   -->
     
     <h2>Mark your ATTENDANCE here...</h2>
-    <form>
+    <!--<form action='upload' method='post' enctype="multipart/form">
+      {% csrf_token %}
       <table cellspacing=15>
       <tr>
-        <td><input type="file" id="fileUpload"></td>
+        <td><input type="file" id="image"></td>
         <td><div class="btn-lg upload-btn-wrapper ">
         <button class="btn">Upload a file</button>
-        <input type="submit" name="myfile" hidden/>
+        <input type="submit" value="upload File" >
         </div></td>
-      </tr>
-       
-
-      
+      </tr>  
+    </form>-->
+    <div class="button">
+      <form   action ='upload' method='post' enctype='multipart/form-data' id='form1'>
+        {% csrf_token %}
+        <table cellspacing=15>
+          <tr>
+            <td><input type="file"   name="image"><br></td>
+            <td><div class="btn-lg upload-btn-wrapper ">
+            <button class="btn" type="submit" form="form1" value="Submit">Submit</button>
+          </div></td>
+        </form>
         
-    </form>
+    </div>
         
     <canvas id="CANVAS" name="CANVAS" width="400" height="350">Your browser does not support Canvas.</canvas>
       
@@ -79,19 +88,15 @@
       </video>
     </div>
 
-    <!-- <div class="button">
-      <form   action ='upload' method='post' enctype='multipart/form-data' >
-        {% csrf_token %}
-        
-          <input type="file"   name="image"><br>
-          <input type="submit" value='upload file'>
-        </form>
-    </div> -->
+  
     
   </body>
 
-    <a id="download" download="face.jpg"></form>
-    <button onclick="myFunction(); download();" align="center" style="margin: 20px 250px auto " class="btn btn-primary dropdown-toggle" type="button" >capture</button></a>
+    <a id="capture" download="face.jpg">
+    <button onclick="myFunction();" align="center" style="margin: 20px 250px auto " class="btn btn-primary dropdown-toggle" type="button" >capture</button></a>
+    <a id="download" download="face.jpg">
+    <button onclick="download();" align="center" style="margin: 20px 250px auto " class="btn btn-primary dropdown-toggle" type="button" >download</button></a>
+      
     <script>
 
       function download(){

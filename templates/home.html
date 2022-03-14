@@ -35,6 +35,7 @@
           <li class="nav-item">
             <a class="nav-link"  href="/">Home</a>
           </li>
+          {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link"  href="/attendance">Attendence Registration</a>
           </li>
@@ -42,7 +43,15 @@
             <a class="nav-link"  href="/employee">Employee Details</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link " href="/accounts/logout">LOGOUT</a>
+            <a class="nav-link " href="/accounts/logout">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link " href="/accounts/login">Login</a>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link " href="/about">About/Feedback</a>
           </li>
         </ul>
             
