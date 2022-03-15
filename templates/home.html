@@ -62,7 +62,7 @@
       <div id="heading">
          <div id="text">
             <h2 class="title-name">HaaZaR</h2>
-            <h2>Welcome {{user.first_name}}!!!</h2>
+            <h2>Welcome<br>Employee no:- {{user.first_name}}</h2>
             <div id="messages">
             {% for message in messages %}
             <h2>{{message}}</h2>
@@ -70,7 +70,7 @@
             </div>
             <h3>Attendance registration made hassle-free....</h3>
             <h4>Here we provide instant attendance taking for your time saving...</h4>
-            <p><a href="/accounts/login">Login</a></a> to continue.</p>
+          
                     
             <button type="button" class="btn-lg btn-primary btn"><a href ="/employee">Employee Details</a></button>     
             <button type="button" class="btn-lg btn-primary btn"><a href ="/attendance"> Attendance Details</a></button>                  

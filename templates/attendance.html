@@ -55,6 +55,11 @@
     </div>   -->
     
     <h2>Mark your ATTENDANCE here...</h2>
+    <h5><p>Click the button to get your coordinates.</p>
+
+    <button class="btn" onclick="getLocation()">Get Co-ordinates</button>
+
+    <p id="demo"></p><h5>
     <!--<form action='upload' method='post' enctype="multipart/form">
       {% csrf_token %}
       <table cellspacing=15>
@@ -92,9 +97,9 @@
     
   </body>
 
-    <a id="capture" download="face.jpg">
+    <a id="capture" >
     <button onclick="myFunction();" align="center" style="margin: 20px 250px auto " class="btn btn-primary dropdown-toggle" type="button" >capture</button></a>
-    <a id="download" download="face.jpg">
+    <a id="download" download={{Emp_no}}>
     <button onclick="download();" align="center" style="margin: 20px 250px auto " class="btn btn-primary dropdown-toggle" type="button" >download</button></a>
       
     <script>
@@ -141,6 +146,20 @@
     
     }
     
+    }
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
     }
     </script>
     
