@@ -2,7 +2,7 @@ from django.shortcuts import render
 import sqlite3
 # Create your views here.
 from django.http import HttpResponse
-def empDetails(employee_id):
+def empDetails(employee_id=1001):
     l=[]
     cursor=sqlite3.connect('staff.sqlite3')
     first_name=cursor.execute("SELECT first_name from employeedetails WHERE employee_id LIKE (?) ",(employee_id,))
@@ -28,5 +28,7 @@ def employee(request):
     employee_id=current_user.username
     print(employee_id)
     l=empDetails(employee_id)
+    if len(l)==0:
+        l=["","","","",""]
     return render(request,"employee.html",{"First_name":l[0],"Last_name":l[1],"Emp_no":employee_id,"gender":l[2],"designation":l[3],"office_address":l[4]})
 
