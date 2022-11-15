@@ -5,4 +5,7 @@ from .storage import OverwriteStorage
 class User(models.Model):
     pic= models.ImageField(upload_to="user_uploaded",default='',storage=OverwriteStorage())
 
+class User1(models.Model):
+    pic= models.ImageField(upload_to="profiles",default='',storage=OverwriteStorage())
+
 

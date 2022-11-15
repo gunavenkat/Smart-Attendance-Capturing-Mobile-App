@@ -1,17 +1,22 @@
--------------for creating an environment----(run)-----------------------------------------------------------
-python -m venv env
+to create environment---
+python -m venv .venv  
 
--------------for running an environment----(run)-----------------------------------------------------------
-env\scripts\activate 
+to activate environment---
+.venv\scripts\activate  
+
 
 -------------for installing libraries-------------------------------------------------
-pip install -r requirements.txt  
+pip install -r requirements.txt
 
 -------------for saving libraries-----------------------------------------------------
 pip freeze > requirements.txt 
 
 --------------------for running server---------------------
 python manage.py runserver
+
+after major changes----------------------------
+python manage.py makemigrations 
+python manage.py migrate
 
 -----------------------------------------------------------------------
 super user- haazar

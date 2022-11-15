@@ -10,9 +10,6 @@ def attendance(request):
     empid=str(current_user.username)
     print(empid)
 
-    users=User.objects.all();
-    p=users[len(users)-1].pic
-    print(p.url)
     return render(request,"attendance.html",{"Emp_no":empid+".jpg"})
     #return HttpResponse("attendance page")
 def uploadimage(request):
